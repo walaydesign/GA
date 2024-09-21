@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./public/js/select2/select2.min.css" />
+    <link rel="stylesheet" href="./public/css/font/flaticon.css" />
+    <link rel="stylesheet" href="./public/css/layout.css" />
+    <link rel="stylesheet" href="./public/css/index.css" />
+    <link rel="stylesheet" href="./public/css/signUp.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <title>MiTRADE登入</title>
+  </head>
+  <style>
+    /* body {
+      background-color: #09143b;
+    } */
+  </style>
+  <body>
+    <header>
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="./index.html"
+          ><img class="logo" src="./public/img/logo.svg" alt=""
+        /></a>
+        <nav class="d-flex align-items-center">
+          <ul class="d-flex align-items-center">
+            <li class="d-lg-block d-none"><a href="#">BINARY TRADE</a></li>
+            <li class="d-lg-block d-none"><a href="#">K CHART</a></li>
+            <li class="d-lg-block d-none"><a href="#">BINARY ORDER</a></li>
+            <li class="position-relative app d-lg-block d-none">
+              <button
+                class="
+                  d-flex
+                  justify-content-center
+                  align-items-center
+                  bg-white
+                  app-btn
+                "
+              >
+                <img class="me-2" src="./public/img/cellphone.svg" alt="" />
+                <span>App下載</span>
+              </button>
+              <div class="app-link position-absolute">
+                <div class="d-flex">
+                  <a href="#"
+                    ><img src="./public/img/btn_app_store.svg" alt=""
+                  /></a>
+                  <a href="#"
+                    ><img src="./public/img/btn_google_play.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="d-flex align-items-center justify-content-center"
+                ><img class="nav_icon" src="./public/img/user.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="d-flex align-items-center justify-content-center"
+                ><img class="nav_icon" src="./public/img/logout.svg" alt=""
+              /></a>
+            </li>
+          </ul>
+          <div class="menu ms-2 d-lg-none d-block">
+            <div class="bar top"></div>
+            <div class="bar middle"></div>
+            <div class="bar bottom"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <nav class="mobile-menu">
+      <img class="mobile-back" src="./public/img/right-chevron.svg" alt="" />
+      <ul class="">
+        <li><a href="#">BINARY TRADE</a></li>
+        <li><a href="#">K CHART</a></li>
+        <li><a href="#">BINARY ORDER</a></li>
+        <li>
+          <div class="d-flex app-box">
+            <a href="#" class="w-50"
+              ><img src="./public/img/btn_app_store.svg" alt=""
+            /></a>
+            <a href="#" class="w-50"
+              ><img src="./public/img/btn_google_play.svg" alt=""
+            /></a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- <header></header> -->
+    <div id="main">
+      <div class="content">
+        <div class="login-title">手機號碼</div>
+        <form action="">
+          <div class="flex">
+            <select id="country">
+              <option value="taiwan" selected>+886</option>
+              <option value="china">+86</option>
+            </select>
+            <input type="tel" placeholder="手機號碼" />
+          </div>
+          <div class="flex">
+            <input type="text" placeholder="登錄密碼" />
+          </div>
+          <div class="flex forget">
+            <a href="forget.html">忘記密碼?</a>
+          </div>
+          <input type="submit" value="安全登錄" class="btn-common" />
+          <div class="info login">
+            <p>沒有帳戶？</p>
+            <a href="signUp.html">註冊</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- <footer></footer> -->
+    <script src="./public/js/jquery-3.1.1.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/loading.js"></script>
+    <script src="./public/js/select2/select2.min.js"></script>
+    <script src="./public/js/select2/zh-TW.js"></script>
+    <script src="./public/js/index.js"></script>
+    <script>
+      $("#country").select2({
+        templateResult: function (idioma) {
+          var $span = $(
+            "<span><img src='./public/img/" +
+              idioma.id +
+              ".png'/> " +
+              idioma.text +
+              "</span>"
+          );
+          return $span;
+        },
+        templateSelection: function (idioma) {
+          var $span = $(
+            "<span><img src='./public/img/" +
+              idioma.id +
+              ".png'/> " +
+              idioma.text +
+              "</span>"
+          );
+          return $span;
+        },
+      });
+    </script>
+  </body>
+</html>
